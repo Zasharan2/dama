@@ -636,9 +636,7 @@ function updateFull() {
                             pieceList[j].promote();
                         }
 
-                        if (movePath[i][2].length == 0) {
-                            endTurn = true;
-                        }
+                        endTurn = true;
                     }
                     for (var k = 0; k < movePath[i][2].length; k++) {
                         if (movePath[i][2][k].length > 0) {
