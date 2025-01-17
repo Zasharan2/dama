@@ -480,7 +480,7 @@ class Piece {
                         }
                     }
                     break;
-                } else if (y - i >= 0 && positionArray[y - i][x] == ((this.col + 1) % 2)) {
+                } else if (y - i >= 0 && positionArray[y - i][x] == this.col) {
                     break;
                 }
             }
