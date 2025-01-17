@@ -86,6 +86,9 @@ const PIECETYPE = {
     KING: 1
 };
 
+var soundSelect = document.getElementById("soundSelect");
+var soundMove = document.getElementById("soundMove");
+
 var selectedPiece;
 
 class Piece {
@@ -125,6 +128,7 @@ class Piece {
                     }
                 }
                 renderFull();
+                soundSelect.play();
             }
             if (this.hovering && Math.sqrt(Math.pow(mouseX - ((this.x * 64) + 32), 2) + Math.pow(mouseY - ((this.y * 64) + 32), 2)) > 32) {
                 this.hovering = false;
@@ -651,6 +655,7 @@ function updateFull() {
                 }
                 renderFull();
                 movePath = [];
+                soundMove.play();
                 break;
             }
         }
